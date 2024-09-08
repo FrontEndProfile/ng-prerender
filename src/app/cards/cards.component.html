@@ -1,0 +1,7 @@
+<div *ngFor="let card of cards">
+    <div class="card" style="border: 1px solid darkblue; padding: 16px;">
+        <p>Blog Name: {{ card.card_name }}</p>
+        <img width="200" [src]="card.media_one_url" [alt]="card.media_one_alt">
+        <a [routerLink]="['/card-detail', card.id]" style="display: block;">View Details</a>
+    </div>
+</div>

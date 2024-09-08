@@ -1,0 +1,16 @@
+<div *ngIf="cardDetails">
+
+    <div>
+        <p>Blog Name: {{ cardDetails.card_name }}</p>
+        <img width="200" [src]="cardDetails.media_one_url" [alt]="cardDetails.media_one_alt">
+        <img width="200" [src]="cardDetails.media_two_url" [alt]="cardDetails.media_two_alt">
+        <img width="200" [src]="cardDetails.media_three_url" [alt]="cardDetails.media_three_alt">
+        <div *ngIf="cardDetails.product_description_editor">Product Description: <span
+                [innerHTML]="cardDetails.product_description_editor"></span></div>
+
+    </div>
+</div>
+
+<div *ngIf="!cardDetails">
+    <p>Loading...</p>
+</div>
